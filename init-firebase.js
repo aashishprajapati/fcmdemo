@@ -22,7 +22,9 @@ messaging.usePublicVapidKey(
 
 messaging.requestPermission()
 .then((permission) => {
-    console.log("permission: " + permission);
+    if(permission === 'granted') {
+        console.log("permission: " + permission);
+    }
     return messaging.getToken();
 })
 .then(token => {
