@@ -150,7 +150,6 @@ function requestPermission() {
       // [START_EXCLUDE]
       // In many cases once an app has been granted notification permission,
       // it should update its UI reflecting this.
-      resetUI();
       // [END_EXCLUDE]
     } else {
       console.log("Unable to get permission to notify.");
