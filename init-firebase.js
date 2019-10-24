@@ -216,4 +216,4 @@ function updateUIForPushPermissionRequired() {
   showHideDiv(permissionDivId, true);
 }
 
-resetUI();
+//resetUI();
