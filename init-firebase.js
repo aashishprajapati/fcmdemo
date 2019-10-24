@@ -20,14 +20,20 @@ messaging.usePublicVapidKey(
   "BOCgMYOSVRyaS6TFl5FCOTfED7GyrvnZUy9AKzgcQBjg2jwSPiWjX9xiF8MosgjdF-p3MwC6MdVSJe-QhiSimMI"
 );
 
-messaging.requestPermission()
-.then(() => {
-    console.log("Permission granted.");
+messaging
+  .requestPermission()
+  .then(function() {
+    console.log("Permission");
     return messaging.getToken();
-})
-.then(token => {
+  })
+  .then(token => {
     console.log("Client token: \n'n" + token);
-})
-.catch((err) => {
+  })
+  .catch(err => {
     console.log(err);
+  });
+
+
+messaging.onMessage(payload => {
+    console.log(payload);
 });
