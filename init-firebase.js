@@ -40,6 +40,10 @@ messaging.onMessage(payload => {
       // options
       title: payload.notification.title,
       message: payload.notification.body
+    },
+    {
+      //settings
+      type: 'danger'
     }
   );
 });
