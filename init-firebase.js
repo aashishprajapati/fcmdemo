@@ -22,12 +22,12 @@ messaging.usePublicVapidKey(
 
 messaging
   .requestPermission()
-  .then(function() {
-    console.log("Permission");
+  .then((result) {
+    console.log("Permission: " + result);
     return messaging.getToken();
   })
   .then(token => {
-    console.log("Client token: \n'n" + token);
+    console.log("Client token: \n\n" + token);
   })
   .catch(err => {
     console.log(err);
@@ -44,4 +44,10 @@ messaging.onMessage(payload => {
 
   toastr.info(payload.notification.body, payload.notification.title);
 
+});
+
+
+messaging.onTokenRefresh()
+.then(newToken => {
+  console.log("Refreshed token: " + newToken);
 });
