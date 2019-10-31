@@ -36,8 +36,7 @@ messaging
 messaging.onMessage(payload => {
   console.log(payload);
   toastr.options = {
-    "closeButton": true,
-    "newestOnTop": false,
+    "positionClass": "toast-top-right",
     "showDuration": "10000"
   };
 
