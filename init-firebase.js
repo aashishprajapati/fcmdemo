@@ -35,15 +35,12 @@ messaging
 
 messaging.onMessage(payload => {
   console.log(payload);
-  $.notify(
-    {
-      // options
-      title: payload.notification.title,
-      message: payload.notification.body
-    },
-    {
-      //settings
-      type: 'danger'
-    }
-  );
+  toastr.options = {
+    "closeButton": true,
+    "newestOnTop": false,
+    "showDuration": "10000"
+  };
+
+  toastr.info(payload.notification.title, payload.notification.body);
+
 });
