@@ -37,9 +37,11 @@ messaging.onMessage(payload => {
   console.log(payload);
   toastr.options = {
     "positionClass": "toast-top-right",
-    "showDuration": "10000"
+    "newestOnTop": true,
+    "timeOut": "60000",
+    "closeButton": true
   };
 
-  toastr.info(payload.notification.title, payload.notification.body);
+  toastr.info(payload.notification.body, payload.notification.title);
 
 });
