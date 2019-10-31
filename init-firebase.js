@@ -36,4 +36,11 @@ messaging
 
 messaging.onMessage(payload => {
     console.log(payload);
+    $.notify({
+      // options
+      message: 'Hello World' 
+    },{
+      // settings
+      type: 'danger'
+    });
 });
