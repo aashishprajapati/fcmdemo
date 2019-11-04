@@ -43,7 +43,7 @@ messaging.onMessage(payload => {
     "closeButton": true
   };
 
-  toastr.danger(payload.notification.body, payload.notification.title);
+  toastr.error(payload.notification.body, payload.notification.title);
 
 });
 
