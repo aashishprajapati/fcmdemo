@@ -42,12 +42,12 @@ messaging.onMessage(payload => {
     "closeButton": true
   };
 
-  toastr.info(payload.notification.body, payload.notification.title);
+  toastr.danger(payload.notification.body, payload.notification.title);
 
 });
 
 
-messaging.onTokenRefresh()
+/* messaging.onTokenRefresh()
 .then(newToken => {
   console.log("Refreshed token: " + newToken);
-});
+}); */
