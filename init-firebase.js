@@ -39,7 +39,8 @@ messaging.onMessage(payload => {
   toastr.options = {
     "positionClass": "toast-top-right",
     "newestOnTop": true,
-    "timeOut": "60000",
+    "timeOut": 0,
+    "extendedTimeOut": 0,
     "closeButton": true
   };
 
